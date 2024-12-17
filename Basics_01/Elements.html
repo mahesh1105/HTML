@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements</title>
+</head>
+<body>
+    <!--
+        HTML stands for Hypertext markup Language, used for creating the web pages and used to describe the structure of the webpage
+        It consists of series of elements that tells the browser how to display the content
+
+        <!DOCTYPE html> -> This will tell that the document type is HTML
+        <html lang="en"> -> here lang attribute tells that the language is english
+        -- html is the root element in the whole html document
+        -- head element contains the meta information or metadata - i.e. data about data
+        -- It includes title of the page, website description, keywords to search for this webpage, copyrights information and others
+        -- Inside head, title element is used to specify the title for html page (which is shown in browser's title bar or in page's tab)
+        -- body element defines the document's body, this is the content which is rendered in the browser
+
+        - An HTML element is defined by a start tag, some content, and an end tag, collectively all or including all.
+        - Ex: <tagname> Some Content... </tagname>
+
+        - Attributes are used to provide additional information about HTML elements.
+        - Attributes are always specified in the start tag
+        - It usually comes in name/valuye pairs, like: name="value"
+    -->
+
+    <!-- Heading - h1 to h6 -->
+    <!-- html headings have its own default font-size, which can be modified under style attribute, and its font-size value -->
+    <h1>This is a Heading</h1>
+    <h2>This is a Heading</h2>
+    <h3>This is a Heading</h3>
+    <h4>This is a Heading</h4>
+    <h5>This is a Heading</h5>
+    <h6>This is a Heading</h6>
+    <h1 style="font-size: 50px;">This is modified Heading</h1>
+
+    <!-- title attribute is basically used to specify some extra information about the element,
+        value of the title attribute will be displayed as a tooltip when you mouse over the element -->
+    <p title="This is a paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat fugiat sunt culpa dignissimos possimus quas qui doloribus. Eum, iste. Modi.</p>
+
+    <a href="http://www.youtube.com" style="text-decoration: none;">Youtube</a>
+
+    <!-- Some HTML elements have no content (like the <br> element). These elements are called empty elements. Empty elements do not have an end tag! -->
+    <br> <!-- To add a line break -->
+
+    <img src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75" alt="This is an image" width="1000px" height="600px">
+    <!--
+        Under img tag, we have src attribute, which is used to specify the URL of the image.
+        URL can be absolute or relative
+        Absolute: Link to an external image that is hosted on another website
+        Relative: Links to an image that is hosted within the website
+        Relative URL does not include the domain name,
+
+        If the URL begins without the slash, It will be relative to the current page, means -
+        <img src="img_girl.jpg">
+        -- If the current page is at:
+            https://example.com/gallery/page1.html
+        -- The browser will look for the image at:
+            https://example.com/gallery/img_girl.jpg
+
+        If the URL begins with the slash, It is relative to the domain
+        <img src="/images/img_girl.jpg">
+        -- Regardless of the current page's location, the browser will look for the image at:
+            https://example.com/images/img_girl.jpg
+
+        Its better to use the relative URL, as it will not break even if you change the domain name
+    -->
+
+    <!--
+        Note: Some elements will display correctly, if you forget the end tag, but unexpected results and error can be seen, if you do this
+        HTML is case insensitive, but lower case is always preferred, as this is followed by most of the developers
+    -->
+
+    <!-- Attribute value should be written in single or double quote, which is optional, but always preferred to use them 
+        If attribute value itself contains single quotes then use double quote to surround it and vice-versa-->
+
+    <!-- hr tag defines the thematic break in an HTML page, and is most often displayed as a horizontal rule
+        hr element is used to separate the content in an HTML page -->
+    <hr>
+
+    <!-- If you want a line break, use (br) and if you want the thematic break, use (hr) -->
+
+    <!-- It will display all the content on the single line -->
+    <p>
+        Hi Hello
+
+        How are you?
+    </p>
+
+    <!-- Use pre tag instead, it defines the preformatted text and it also preserves both spaces and line breaks -->
+    <pre>
+        Hi Hello
+
+        How are you?
+    </pre>
+
+    <!-- style attribute is used to add style to an element, such as - color, font, size, and more... -->
+    <!-- Syntax of style attribute: 
+        <tagname style="property:value;"> -->
+    <p style="color: green; font-size: 30px; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">This is a Para</p>
+
+    <!-- Comment is written inside this
+     whatever written inside this is not displayed by the browser -->
+</body>
+</html>

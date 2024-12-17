@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotation</title>
+</head>
+<body>
+    <!-- Quotation and Citation Elements
+        . <blockquote> - Defines the section that is quoted from another source
+        . <q> - Defines a short inline quotation
+        . <abbr> - Defines a abbreviation or acronym
+        . <address> - Defines contact information for the author/owner of a document
+        . <cite> - Defines the title of a work
+        . <bdo> - Defines the text direction
+    -->
+    
+    <p>This is a quote from another webpage:</p>
+    <blockquote cite="www.google.com">
+        CSS stands for Cascading style sheets
+        It is used to add styles to the html webpage
+    </blockquote>
+
+    <!-- Browsers normally insert quotation marks around the quotation. -->
+    <p>CSS is used to <q>style the webpages</q></p>
+
+    <!-- Using abbr tag, it will give additional information for the term or abbreviation, which is mentioned under title -->
+    <p>Iphone is desgined by <abbr title="Founder: Steve Jobs">Apple</abbr> India</p>
+
+    <!-- Document's owner/author contact information 
+        usually renders in italic and browsers will always add a line break before and after the element -->
+    <address>
+        Written by Mahesh<br>
+        visit us at:<br>
+        www.example.com<br>
+        Haryana, India
+    </address>
+
+    <!-- Defines the title of the creative work, i.e. a book, a poem, a movie, a painting, a sculpture, a song, etc
+        Note: A person's name is not the title of work 
+        Text inside cite usually renders in italic -->
+    <p><cite>Three Men in a Boat</cite> By Helen Keller</p>
+
+    <!-- bdo tag is used to override the current tag direction -->
+    <bdo dir="rtl">tfel ot thgir morf nettirw si txet sihT</bdo>
+    <br>
+    <bdo dir="ltr">This text is written from left to right</bdo>
+</body>
+</html>
