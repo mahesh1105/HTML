@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+</head>
+<body>
+    <!-- Colors can be specified with color names or with HEX, RGB, RGBA, HSL or HSLA values -->
+    <p style="background-color: tomato; color: white; border: 2px solid yellow;">Hello Mahesh</p>
+
+    <!--
+    RGB - Red Green Blue
+    RGB color can be specified by using the below formula -
+    RGB(red, green, blue)
+
+    Each parameter can have a value ranging from 0-255
+    Total Possible values = 256 * 256 * 256 = 16777216 -> 16.7 Million Colors Possible
+
+    RGB(255, 0, 0) -> Red
+    RGB(0, 255, 0) -> Green
+    RGB(0, 0, 255) -> Blue
+    RGB(0, 0, 0) -> Black
+    RGB(255, 255, 255) -> White
+
+    Shades of gray are defined when all the three parameters having equal values
+    Ex -> RGB(100, 100, 100)
+
+    RGBA - RGB extension with Alpha Channel (specifies Opacity of the color)
+    RGBA color can be specified by using the below formula -
+    RGBA(red, green, blue, alpha)
+
+    alpha value ranges from 0.0(Fully Transparent) to 1.0(Not Transparent at all)
+    -->
+
+    <!--
+    HEX or Hexadecimal color is specified with: #RRGGBB, where RR = Red, GG = Green and BB = Blue
+    Just like RGB(), here value of RR ranges from 0-255, i.e. (00-ff), hex format of decimal value(0-255)
+    Total Possible Colors = 256 * 256 * 256 = 16777216 = 16.7 Million Colors Possible
+
+    #ff0000 -> Red
+    #00ff00 -> Green
+    #0000ff -> Blue
+    #000000 -> Black
+    #ffffff -> White
+
+    Shades of gray are defined when all the three parameters having equal values
+    Ex -> #404040, #aaaaaa
+    -->
+
+    <!--
+    HSL - Hue, Saturation and Lightness
+    HSL color can be specified by using the below formula -
+    HSL(hue, saturation, lightness)
+    
+    Hue - Represents the degree of the color from 0 to 360 degree
+    Red = 0, Green - 120 and Blue = 240 (Note - 360 deg = 0 deg means red again)
+
+    Saturation - Represents the percentage value, 0% -> shade of gray (no color at all) and 100% -> Full Color
+    It can be defined as the intensity of the Color or in General term, how much it is dissolved or absorbed
+    100% -> Pure Color, i.e. No Shades of Gray
+    50% -> 50% Gray, But you can still see the color
+    0% -> Completely Gray, No Color at all
+
+    Lightness - Represents the percentage value, 0% -> Black and 100% -> White
+    It describes that how much light you want to give the color
+    0% -> No Light (Black)
+    50% -> means 50% Light (Neither Dark nor Light)
+    100% -> Full Lightness (White)
+
+    Shades of gray can be defined by setting the saturation value to 0% (No Color at all, Completely Gray)
+    and setting the Lightness value from 0% to 100% irrespective to the value of hue
+
+    HSLA - Hue, Saturation, Lightness and Alpha Channel (specifies the Opacity for a color)
+    HSLA color can be specified by using the below formula -
+    HSL(hue, saturation, lightness, alpha)
+
+    alpha parameter is the number having the value ranges from 0.0(Fully Transparent) to 1.0(Not Transparent at all)
+    -->
+</body>
+</html>

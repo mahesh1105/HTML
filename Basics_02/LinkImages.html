@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Display the title of the webpage -->
+    <title>Link and Images</title>
+    <!-- Display the small image next to the page title in browser tab -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        a#linkmod:link {
+            text-decoration: none;
+            color: white;
+            background-color: black;
+        }
+
+        a#linkmod:visited {
+            text-decoration: none;
+            color: white;
+            background-color: #505050;
+        }
+
+        a#linkmod:hover {
+            text-decoration: dashed;
+            color: white;
+            background-color: purple;
+        }
+
+        a#linkmod:active {
+            text-decoration: none;
+            color: white;
+            background-color: red;
+        }
+
+        body {
+            background-image: url('night.jpg'); /* Set this image as background image for whole page */
+            background-repeat: no-repeat; /* If image size is small, it will start repeating, setting this property to no-repeat, avoid it from repeating */
+            background-size: cover; /* This will set the whole image as the page background */
+            background-attachment: fixed; /* This property will verify that the bacground image covers the entire element with no stretching (the image will keep its origianl proportions) */
+            /* If you want the background image to stretch to fit the entire element, then set background-size property to 100% 100% */
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Anchor tag <a></a> is used to insert the hyperlink to the webpage
+        Hyperlinks basically redirects us from one location to another
+        When you hover mouse over the link, it will turn the mouse arrow into the little hand
+        Note: It is not necessary for the link to be text, it can either be images or any other HTML element
+    -->
+
+    <a href="www.google.com">Google</a>
+    <br>
+
+    <!--
+        HTML Link Color:
+        ----------------
+        By default, links will appear as follows in all browsers:
+        An unvisited link is underlined and blue
+        A visited link is underlined and purple
+        An active link is underlined and red
+    -->
+
+    <!--
+        By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.
+        The target attribute specifies where to open the linked document.
+
+        The target attribute can have one of the following values:
+
+        _self - Default. Opens the document in the same window/tab as it was clicked
+        _blank - Opens the document in a new window or tab
+        _parent - Opens the document in the parent frame
+        _top - Opens the document in the full body of the window
+    -->
+
+    <!--
+        Absolute URl: full web address in href attribute
+        Relative URL: link to the page within the same website (a local link)
+    -->
+
+    <!-- Using image as a link -->
+    <a href="https://www.pexels.com" target="_blank">
+        <img src="nature.jpg" alt="nature image" width="600px" height="400px">
+    </a>
+
+    <br>
+
+    <!-- Link to an Email Address -->
+    <a href="mailto:maheshsaini110500@gmail.com" style="text-decoration: none;">Send email</a>
+    <br>
+
+    <!-- Button as a link -->
+    <button onclick="document.location='https://www.google.com'">HTML</button>
+    <br>
+
+    <!-- Link Titles -->
+    <!-- title attribute specifies extra information about the element when mouse moves over the element -->
+    <a href="https://www.google.com" title="Link to Google">Google</a>
+    <br>
+
+    <!-- Changing the Link state using CSS -->
+    <!-- States: Unvisited, Visited, Hover and Active -->
+    <a href="https://www.google.com" id="linkmod" target="_blank">Link to Google</a>
+    <br>
+
+    <!-- Jumping to some section in same page -->
+    <!-- Simply give the id as a link -->
+    <a href="#linkmod">Link to Same Page</a>
+    <br>
+
+    <!-- Style attribute is recommended rather than width and height attribute separately -->
+    <!-- float property is used to float the image to the left or to the right of the text -->
+    <img src="nature.jpg" alt="Nature Image" style="float: right; width: 400px; height: auto;">
+
+    <!-- HTML allows to embed animated gif to webpage -->
+    <!-- <img src="animated_img.gif" alt="animation"> -->
+
+    <!-- Image Maps -->
+    <!-- For that, use the usemap attribute and its value starts with # -->
+    <!-- Later Create the map element and use same value of "usemap" in img element in name attribute in map element -->
+    <img src="nature.jpg" alt="nature img" style="width: 1000px; height: 600px;" usemap="#mapimg">
+
+    <!-- shape attribute possible values: rect, circle, poly or default -->
+    <map name="mapimg">
+        <area shape="rect" coords="650,0,710,300" href="https://www.pexels.com/search/tree/" alt="Tree" target="_blank">
+        <area shape="circle" coords="300, 430, 100" href="#" alt="River" onclick="myFunc()">
+    </map>
+
+    <!-- JavaScript Code -->
+    <script>
+        function myFunc() {
+            alert("You clicked on the river")
+        }
+    </script>
+
+    <!-- Background Image Property -->
+    <!-- This will set the background image for para only -->
+    <p style="background-image: url('night.jpg');">This is a Para</p>
+
+    <!-- Set the background image to whole body -->
+    <!-- under style element in head section -->
+
+    <!-- <picture> element allows you to display different pictures for different devices or screen sizes -->
+    <!--
+        picture element gives web developers more flexibility in specifying image resources
+        The <picture> element contains one or more <source> elements, each referring to different images through the srcset attribute
+        This way the browser can choose the image that best fits the current view and/or device
+        Each <source> element has a media attribute that defines when the image is the most suitable
+    -->
+
+    <picture>
+        <source media="(min-width: 5000px)" srcset="drink.jpg">
+        <source media="(min-width: 1000px)" srcset="food.jpg">
+        <img src="tree.jpg" alt="This is a tree">
+    </picture>
+
+    <!--
+        Note: Always specify an <img> element as the last child element of the <picture> element
+              The <img> element is used by browsers that do not support the <picture> element, or if none of the <source> tags match
+    -->
+
+    <!--
+        When to use the picture element
+        
+        1. Bandwidth:
+        If the screen size is small then it is not necessary to load the larger image file, the browser will use the first <source> element
+        with matching attribute value, i.e. screen size and then display the image and ignore further source
+
+        2. Format Support:
+        Some browsers or devices may not support all image formats, by using the picture element, you can add images for all formats, and
+        then the browser will use the first format it recognizes and ignore other following elements
+
+        Note: the browser will use the first source element with matching values and ignores the rest of the following source
+    -->
+
+    <!-- Favicon is small image displayed next to the page title in browser tab -->
+    <!-- It can added by using the link element in the head section after the title element-->
+</body>
+</html>
