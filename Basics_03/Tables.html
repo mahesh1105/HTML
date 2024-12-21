@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        /* Add Border to the table */
+        table, th, td {
+            /* border shorthand - thickness, style, color */
+            border: 2px solid black;
+            /* This will make the border collapse into a single border */
+            /* border-collapse: collapse; */
+            border-radius: 7px;
+            /* border-style can have possible values: dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden */
+            border-style: dotted;
+            border-color: red;
+        }
+        /* If you don't want border around table then leave the table from css selector */
+        /* i.e. only add border to 'th' and 'td' */
+        /* Select the cells and then add the properties to it & cell - td & th */
+        th, td {
+            background-color: aquamarine;
+            /* Align the text for each cell to center */
+            text-align: center;
+            padding: 20px;
+            /* Padding can also be given specifically - like: padding-top, padding-bottom, padding-left & padding-right */
+        }
+
+        /* Setting the width of the table */
+        table {
+            /* Using a percentage as the size unit for a width means how wide will this element be compared to its parent element, 
+               which in this case is the <body> element. */
+            width: 100%;
+            /* To change the spacing between the cells */
+            border-spacing: 10px;
+        }
+
+        /* Set the width of the column to 70% wrt its parent */
+        th#age {
+            width: 70%;
+        }
+
+        /* Set the height of the second row to 200px */
+        tr#r2 {
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tables in HTML -->
+    <!-- tr - 'table row', th - 'table header' & td - 'table data' -->
+    <!-- A table cell can have all sorts of HTML elements: text, images, lists, links, other table, etc -->
+    <table>
+        <tr id="r1">
+            <th id="name">Name</th>
+            <th id="age">Age</th>
+            <th id="type">Type</th>
+        </tr>
+        <tr id="r2">
+            <td>Mahesh</td>
+            <td>24</td>
+            <td>Human</td>
+        </tr>
+        <tr id="r3">
+            <td>Alex</td>
+            <td>22</td>
+            <td>Robot</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>Mahesh</td>
+            <td>Alex</td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>24</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <th>Type</th>
+            <td>Human</td>
+            <td>Robot</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table>
+        <caption>Student Data</caption>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Type</th>
+        </tr>
+        <tr>
+            <td>Mahesh</td>
+            <td>Saini</td>
+            <td>24</td>
+            <td>Human</td>
+        </tr>
+        <tr>
+            <td>Alex</td>
+            <td>Carter</td>
+            <td>22</td>
+            <td>Robot</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table style="border: 2px solid black;">
+        <caption>Student Data</caption>
+        <tr>
+            <!-- Merging the two columns -->
+            <th colspan="2">Name</th>
+            <th>Age</th>
+            <th>Type</th>
+        </tr>
+        <tr>
+            <td>Mahesh</td>
+            <td>Saini</td>
+            <td>24</td>
+            <td>Human</td>
+        </tr>
+        <tr>
+            <td>Alex</td>
+            <td>Carter</td>
+            <td>22</td>
+            <td>Robot</td>
+        </tr>
+    </table>
+
+    <!-- HTML tables can adjust the padding inside the cells and also the space between the cells -->
+    
+    <!-- Padding: Cell padding is the space between the cell edges and the cell content -->
+    <!-- By Default, the padding is set to 0 -->
+    <!-- To change the padding, use padding property -->
+
+    <!-- Cell Spacing: space between the cells -->
+    <!-- By default, the space is set to 2 pixels -->
+    <!-- To change the space between the cells, use the CSS 'border-spacing' property -->
+
+    <hr>
+
+    <!-- rowspan and colspan -->
+    <!-- rowspan attribute represents the number of rows to span or merge -->
+    <!-- colspan attribute represents the number of columns to span or merge -->
+    <table>
+        <tr>
+            <!-- Combining Column for Name - firstName and lastName -->
+            <th colspan="2">Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <th>Mahesh</th>
+            <th>Saini</th>
+            <th>24</th>
+        </tr>
+        <tr>
+            <th>Alex</th>
+            <th>Carter</th>
+            <th>22</th>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>Alex</td>
+        </tr>
+        <tr>
+            <!-- Combining Row for Phone -->
+            <th rowspan="2">Phone</th>
+            <td>1234</td>
+        </tr>
+        <tr>
+            <td>1212</td>
+        </tr>
+    </table>
+
+    <hr>
+    <hr>
+</body>
+</html>

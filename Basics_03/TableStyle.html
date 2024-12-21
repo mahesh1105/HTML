@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Styling</title>
+    <style>
+        th, td {
+            text-align: center;
+            padding: 10px;
+            border-bottom: 2px solid black;
+        }
+
+        tr {
+            border-bottom: 2px solid black;
+        }
+
+        table, th, td {
+            border-radius: 7px;
+            /* border: 2px solid black; */
+        }
+
+        /* Selecting nth-child of table row which is even */
+        tr:nth-child(even) {
+            background-color: aqua;
+        }
+
+        /* Selecting nth-child of table header and table data which is even */
+        th:nth-child(even), td:nth-child(even) {
+            background-color: aqua;
+        }
+
+        /* Select the last child tr and remove border bottom for all td's inside it */
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* While hovering over table row, change the background color */
+        tr:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Student's Data</caption>
+        <tr>
+            <th>Name</th>
+            <th>RollNo</th>
+            <th>Marks</th>
+            <th>Attendance</th>
+            <th>Weight</th>
+        </tr>
+        <tr>
+            <td>Mahesh</td>
+            <td>01</td>
+            <td>100</td>
+            <td>10</td>
+            <td>70</td>
+        </tr>
+        <tr>
+            <td>Alex</td>
+            <td>02</td>
+            <td>90</td>
+            <td>8</td>
+            <td>65</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>03</td>
+            <td>80</td>
+            <td>5</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>04</td>
+            <td>70</td>
+            <td>9</td>
+            <td>75</td>
+        </tr>
+    </table>
+
+    <hr>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Colgroup</title>
+</head>
+<body>
+    <!-- colgroup element is used to style specific columns of a table -->
+    <!-- If you want to style first two columns of the table then use <colgroup> and <col> element -->
+
+    <!--
+        The <colgroup> element should be used as a container for the column specifications.
+        Each group is specified with a <col> element.
+
+        The span attribute specifies how many columns that get the style.
+        The style attribute specifies the style to give the columns.
+
+        Note: The <colgroup> tag must be a child of a <table> element and should be placed before any other table elements, 
+        like <thead>, <tr>, <td> etc., but after the <caption> element, if present.
+
+        There is limited section of CSS properties allowed to use ib colgroup
+        i.e. width, visibility, background, border
+        and other property have no effect on the table
+    -->
+
+    <table id="main">
+        <caption>Student's Data</caption>
+        <colgroup>
+            <!-- If you want to style the middle of the table, then you can have empty col element (with no styles) -->
+            <!-- <col span="2"> -->
+            <col span="2" style="background-color: aqua;">
+            <!-- Multiple col elements can also be possible -->
+            <col span="3" style="background-color: coral;">
+            <!-- Hide the column using the visibility: collapse in style attribute -->
+        </colgroup>
+        <tr>
+            <th>Name</th>
+            <th>RollNo</th>
+            <th>Marks</th>
+            <th>Attendance</th>
+            <th>Weight</th>
+        </tr>
+        <tr>
+            <td>Mahesh</td>
+            <td>01</td>
+            <td>100</td>
+            <td>10</td>
+            <td>70</td>
+        </tr>
+        <tr>
+            <td>Alex</td>
+            <td>02</td>
+            <td>90</td>
+            <td>8</td>
+            <td>65</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>03</td>
+            <td>80</td>
+            <td>5</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>04</td>
+            <td>70</td>
+            <td>9</td>
+            <td>75</td>
+        </tr>
+    </table>
+</body>
+</html>

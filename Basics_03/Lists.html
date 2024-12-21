@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+
+    <style>
+        body {
+            background-color: #111111;
+            color: white;
+        }
+
+        #navmenu {
+            list-style-type: none;
+        }
+
+        #navmenu > li > a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            margin: 50px;
+            border-radius: 7px;
+        }
+
+        #navmenu > li {
+            float: left;
+        }
+
+        #navmenu > li > a:hover {
+            background-color: purple;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Lists in HTML is used to group similar or related items in lists -->
+    <!--
+        Three Type of Lists:
+        Ordered List, Unordered List and description List
+    -->
+    
+    <!-- Ordered Lists -->
+    <!-- Marked by number by default -->
+    <ol>
+        <li>Haryana</li>
+        <li>Karnataka</li>
+        <li>Rajasthan</li>
+        <li>Uttarakhand</li>
+        <li>Madhya Pradesh</li>
+    </ol>
+
+    <!-- Unordered Lists -->
+    <!-- Marked with bullets (small black circles) by default -->
+    <ul>
+        <li>Tea</li>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Water</li>
+        <li>Juices</li>
+    </ul>
+
+    <!-- Description Lists -->
+    <!--
+    dl - decsription list
+    dt - description term
+    dd - description data
+    -->
+    <dl>
+        <dt>Tea</dt>
+        <dd>Ginger Tea</dd>
+        <dd>Cardamom Tea</dd>
+        <dd>Lemon Tea</dd>
+        <dd>Iced Tea</dd>
+        <dt>Coffee</dt>
+        <dd>Cappuccino</dd>
+        <dd>Latte</dd>
+        <dd>Mocha</dd>
+    </dl>
+
+    <!-- Unordered List can be styled by changing the list-style-type property of the list item -->
+    <!-- Possible values: disc, circle, square and none -->
+    <ul style="list-style-type: circle;">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+    </ul>
+
+    <ul style="list-style-type: square;">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+    </ul>
+
+    <ul style="list-style-type: disc;">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+    </ul>
+
+    <ul style="list-style-type: none;">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+    </ul>
+
+    <!-- Nested Lists -->
+    <ul style="list-style-type: none;">
+        <li>Tea</li>
+        <ul>
+            <li>Green Tea</li>
+            <li>Ginger Tea</li>
+            <li>Lemon Tea</li>
+            <li>Cardamom Tea</li>
+        </ul>
+        <li>Coffee</li>
+        <ul>
+            <li>Cappuccino</li>
+            <li>Latte</li>
+            <li>Mocha</li>
+        </ul>
+    </ul>
+
+    <!-- Create the Navigation menu using horizontal list -->
+    <ul id="navmenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+    <br>
+
+    <!-- Ordered list cane be styled using type attribute -->
+    <!-- Number -->
+    <ol type="1">
+        <li>Mahesh</li>
+        <li>Alex</li>
+        <li>Peter</li>
+        <li>Tom</li>
+        <li>Thomas</li>
+    </ol>
+
+    <!-- Uppercase Letters -->
+    <ol type="A">
+        <li>Mahesh</li>
+        <li>Alex</li>
+        <li>Peter</li>
+        <li>Tom</li>
+        <li>Thomas</li>
+    </ol>
+
+    <!-- Lowercase Letters -->
+    <ol type="a">
+        <li>Mahesh</li>
+        <li>Alex</li>
+        <li>Peter</li>
+        <li>Tom</li>
+        <li>Thomas</li>
+    </ol>
+
+    <!-- Roman Numbers - Uppercase -->
+    <ol type="I">
+        <li>Mahesh</li>
+        <li>Alex</li>
+        <li>Peter</li>
+        <li>Tom</li>
+        <li>Thomas</li>
+    </ol>
+
+    <!-- Roman Numbers - Lowercase -->
+    <ol type="i">
+        <li>Mahesh</li>
+        <li>Alex</li>
+        <li>Peter</li>
+        <li>Tom</li>
+        <li>Thomas</li>
+    </ol>
+
+    <!-- Control List Counting, can be done using the start attribute -->
+    <ol start="101">
+        <li>Mahesh</li>
+        <li>Alex</li>
+    </ol>
+
+    <!-- Nested Lists -->
+    <ol type="I">
+        <li>Mahesh</li>
+        <ol>
+            <li>Smart</li>
+            <li>Passionate</li>
+            <li>Dedicated</li>
+        </ol>
+        <li>Alex</li>
+        <ol>
+            <li>Genius</li>
+            <li>Intelligence AI</li>
+        </ol>
+    </ol>
+</body>
+</html>
