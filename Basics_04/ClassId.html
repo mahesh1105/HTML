@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Id</title>
+
+    <style>
+        /* class can be selected using . */
+        .main {
+            background-color: #202020;
+            color: white;
+        }
+
+        .c1 {
+            background-color: purple;
+            color: white;
+        }
+
+        .c1, .main {
+            display: inline-block;
+            padding: 5px;
+            margin: auto;
+        }
+
+        #id1 {
+            color: pink;
+        }
+
+        #id2 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Class is used to specify the class of HTML element
+        Multiple HTML elements can have same class name
+        Also, a single HTML element can have multiple class
+    -->
+
+    <p class="c1">This is para 1</p>
+    <p class="c1">This is para 2</p>
+
+    <p class="para main">This is main para</p>
+
+    <!-- Three div's having same class name -->
+    <div class="city">
+        <h2>London</h2>
+        <p>London is the capital of England.</p>
+    </div>
+    
+    <div class="city">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p>
+    </div>
+      
+    <div class="city">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <!-- HTML id is used to specify the unique id for an HTML element -->
+    <!-- More than one element cannot have same id within the HTML document -->
+    <!-- id is selected using # -->
+
+    <p id="id1">This is First Para with Unique ID</p>
+    <p id="id2">This is Second Para with Different ID</p>
+
+    <!-- Creating the bookmark using id and links -->
+    <a href="#id2">Click Me</a>
+    
+    <!-- It means first go to that file then jump to this id in that file -->
+    <a href="html_demo.html#id1">Jump to Chapter 4</a>
+
+    <script>
+        // To select the element by className
+        const div = document.getElementsByClassName('city')
+
+        // Select the element by id
+        const ids = document.getElementById('id1')
+    </script>
+</body>
+</html>
