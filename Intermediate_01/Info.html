@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        # HTML Semantic Elements:
+        -------------------------
+        Semantic elements = elements with a meaning.
+
+        ## What are Semantic Elements?
+        ------------------------------
+        - A semantic element clearly describes its meaning to both the browser and the developer.
+        - Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+        - Examples of semantic elements: <img>, <table>, and <article> - Clearly defines its content.
+
+        # HTML Entities:
+        ----------------
+        Reserved characters in HTML must be replaced with entities:
+        < (less than) = &lt;
+        > (greater than) = &gt;
+        
+        ## HTML Character Entities:
+        ---------------------------
+        - Some characters are reserved in HTML.
+        - If you use the less than (<) or greater than (>) signs in your HTML text, the browser might mix them with tags.
+        - Entity names or entity numbers can be used to display reserved HTML characters.
+
+        ** Entity names look like this:
+        &entity_name;
+        
+        ** Entity numbers look like this:
+        &#entity_number;
+        
+        To display a less than sign (<) we must write: &lt; or &#60;
+
+        # The HTML charset Attribute:
+        -----------------------------
+        To display an HTML page correctly, a web browser must know the character set used in the page.
+
+        ** This is specified in the <meta> tag:
+        <meta charset="UTF-8">
+
+        ** If not specified, UTF-8 is the default character set in HTML.
+
+        ## UTF-8 Characters:
+        --------------------
+        - Many UTF-8 characters cannot be typed on a keyboard, but they can always be displayed using numbers (called entity numbers):
+
+        A is 65
+        B is 66
+        C is 67
+        
+        Example:
+        --------
+        <!DOCTYPE html>
+        <html>
+        <meta charset="UTF-8">
+        <body>
+
+        <p>I will display A B C</p>
+        <p>I will display &#65; &#66; &#67;</p>
+
+        </body>
+        </html>
+
+        Example Explained:
+        ------------------
+        - The <meta charset="UTF-8"> element defines the character set.
+        - The characters A, B, and C, are displayed by the numbers 65, 66, and 67.
+        - To let the browser understand that you are displaying a character, you must start the entity number with &# and end it with ; (semicolon).
+
+        # The ASCII Character Set:
+        --------------------------
+        ASCII was the first character encoding standard for the web. It defined 128 different characters that could be used on the internet:
+
+        English letters (A-Z)
+        Numbers (0-9)
+        Special characters like ! $ + - ( ) @ < >.
+
+        ## HTML Uniform Resource Locators:
+        ----------------------------------
+        - A URL is another word for a web address.
+        - A URL can be composed of words (e.g. w3schools.com), or an Internet Protocol (IP) address (e.g. 192.68.20.50).
+        - Most people enter the name when surfing, because names are easier to remember than numbers.
+
+        ## URL - Uniform Resource Locator:
+        ----------------------------------
+        - Web browsers request pages from web servers by using a URL.
+        - A Uniform Resource Locator (URL) is used to address a document (or other data) on the web.
+
+        scheme://prefix.domain:port/path/filename
+
+        Explanation:
+        ------------
+        . scheme - defines the type of Internet service (most common is http or https)
+        . prefix - defines a domain prefix (default for http is www)
+        . domain - defines the Internet domain name (like w3schools.com)
+        . port - defines the port number at the host (default for http is 80)
+        . path - defines a path at the server (If omitted: the root directory of the site)
+        . filename - defines the name of a document or resource
+
+        ## URL Encoding:
+        ----------------
+        - URLs can only be sent over the Internet using the ASCII character-set. If a URL contains characters outside the ASCII set, the URL has to be converted.
+        - URL encoding converts non-ASCII characters into a format that can be transmitted over the Internet.
+        - URL encoding replaces non-ASCII characters with a "%" followed by hexadecimal digits.
+        - URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign, or %20.
+
+        ## HTML Versus XHTML:
+        ---------------------
+        - XHTML is a stricter, more XML-based version of HTML.
+
+        ** What is XHTML?
+        -----------------
+        . XHTML stands for EXtensible HyperText Markup Language
+        . XHTML is a stricter, more XML-based version of HTML
+        . XHTML is HTML defined as an XML application
+        . XHTML is supported by all major browsers
+
+        ## Why XHTML?
+        -------------
+        - XML is a markup language where all documents must be marked up correctly (be "well-formed").
+        - XHTML was developed to make HTML more extensible and flexible to work with other data formats (such as XML).
+          In addition, browsers ignore errors in HTML pages, and try to display the website even if it has some errors in the markup.
+          So XHTML comes with a much stricter error handling.
+
+        # The Most Important Differences from HTML:
+        -------------------------------------------
+        . <!DOCTYPE> is mandatory
+        . The xmlns attribute in <html> is mandatory
+        . <html>, <head>, <title>, and <body> are mandatory
+        . Elements must always be properly nested
+        . Elements must always be closed
+        . Elements must always be in lowercase
+        . Attribute names must always be in lowercase
+        . Attribute values must always be quoted
+        . Attribute minimization is forbidden
+
+    -->
+</body>
+</html>
